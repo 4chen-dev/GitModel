@@ -1,5 +1,10 @@
 package com.git.pojo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class User {
     private String username;
     private String password;
@@ -35,5 +40,29 @@ public class User {
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
+    }
+
+    public static void main(String[] args) {
+        List<String> list = new ArrayList();
+        list.add("jay");
+        for (int i = 0; i < list.size(); i++) {
+            String s = list.get(i);
+            if ("jay".equals(s)) {
+                list.remove(s);
+            }
+        }
+
+        Map<String, Object> map = new HashMap<>();
+        for (Map.Entry<String, Object> entry : map.entrySet()) {
+            System.out.println(entry.getKey());
+            System.out.println(entry.getValue());
+        }
+        String[] arr = {"12", "12", "33", "9"};
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].length()==1) {
+                System.out.println(arr[i]);
+            }
+        }
+
     }
 }
